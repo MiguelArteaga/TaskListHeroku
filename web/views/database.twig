@@ -1,0 +1,17 @@
+{% block content %}
+<p>Task List:</p>
+<form method="get" action="/db">
+	<label> Tarea Nueva </label>
+	<input type="text" name="tareaInsertar">
+	<input type="submit" value="Insertar">
+</form>
+{% for i in id %}
+  <li> {{ i.tarea }} <a href="/db/{{ i.id }}">Eliminar</a> </li>
+{% else %}
+  <li>Nameless!</li>
+{% endfor %}
+</ul>
+
+
+
+{% endblock %}
